@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parralax website || Vanilla js
+    </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+            <div id="marker"></div>
+        </ul>
+    </header>
+
+    <section>
+        <img src="stars.png" id="stars"  >
+        <img src="moon.png" id="moon">
+        <h2 id="text">Moon light</h2>
+        <!--<img src="montagne_front1.png" id="montagne_front">-->
+        <a href="#sec" id="btn">Explore</a>
+
+    </section>
+    <div class="sec" id="sec">
+        <h2>
+            Parallax Scrolling effects
+        </h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatum eligendi saepe ad optio neque earum, maxime nemo, molestias possimus veritatis distinctio aliquam consequatur est, magnam aliquid debitis? Corrupti, atque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aspernatur illo in repellendus sunt consequuntur, neque nulla rerum itaque quidem doloremque libero eum iure quis eveniet ex omnis facilis cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus repudiandae dolore dignissimos cupiditate fugiat odio consequatur temporibus ratione saepe? Soluta beatae maxime dolores dolorem reiciendis repudiandae aut nobis impedit quam?
+            <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, impedit recusandae. Placeat, error. Excepturi quam officiis obcaecati quo, dolor dolores nisi optio in sequi adipisci illo asperiores autem beatae atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim fuga deleniti nihil quas dolor sapiente quis. Optio, repellendus saepe ut iste accusamus laudantium aperiam praesentium autem nemo illum culpa sunt. <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatum eligendi saepe ad optio neque earum, maxime nemo, molestias possimus veritatis distinctio aliquam consequatur est, magnam aliquid debitis? Corrupti, atque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aspernatur illo in repellendus sunt consequuntur, neque nulla rerum itaque quidem doloremque libero eum iure quis eveniet ex omnis facilis cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus repudiandae dolore dignissimos cupiditate fugiat odio consequatur temporibus ratione saepe? Soluta beatae maxime dolores dolorem reiciendis repudiandae aut nobis impedit quam?
+            <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatum eligendi saepe ad optio neque earum, maxime nemo, molestias possimus veritatis distinctio aliquam consequatur est, magnam aliquid debitis? Corrupti, atque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aspernatur illo in repellendus sunt consequuntur, neque nulla rerum itaque quidem doloremque libero eum iure quis eveniet ex omnis facilis cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus repudiandae dolore dignissimos cupiditate fugiat odio consequatur temporibus ratione saepe? Soluta beatae maxime dolores dolorem reiciendis repudiandae aut nobis impedit quam?
+            <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatum eligendi saepe ad optio neque earum, maxime nemo, molestias possimus veritatis distinctio aliquam consequatur est, magnam aliquid debitis? Corrupti, atque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aspernatur illo in repellendus sunt consequuntur, neque nulla rerum itaque quidem doloremque libero eum iure quis eveniet ex omnis facilis cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus repudiandae dolore dignissimos cupiditate fugiat odio consequatur temporibus ratione saepe? Soluta beatae maxime dolores dolorem reiciendis repudiandae aut nobis impedit quam?
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars')
+        let moon = document.getElementById('moon');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.top = value *0.75 + 'px'
+            moon.style.top = value *1.05 +'px'
+            text.style.marginRight= value *  4 +'px' 
+            text.style.marginTop= value * 1.5 +'px' 
+            header.style.Top = value * 0.5 + 'px'
+            btn.style.marginTop = value * 1.5 + 'px';        
+        })
+    </script>
+   <footer> 
+<div class="navigation">
+    <div class="menuToggle"></div>
+    <div class="menu">
+        <ul>
+            <li style="--i:0.1s;"><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li style="--i:0.2s;"><a href="#"><ion-icon name="logo-snapchat"></ion-icon></a></li>
+            <li style="--i:0.3s;"><a href="#"><ion-icon name="logo-twitter"></ion-icon></ion-icon></ion-icon></a></li>
+        </ul>
+    </div>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+    let menuToggle = document.querySelector('.menuToggle');
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active')
+        }
+</script>
+</footer>
+    
+</body>
+
+</html>
